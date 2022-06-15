@@ -113,7 +113,6 @@ html {
 
 .section_1_web img,
 .section_1_ux img{
-    height: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: var(--space-1);
 }
