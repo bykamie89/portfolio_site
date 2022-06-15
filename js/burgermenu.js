@@ -20,7 +20,7 @@ function toggleMenu() {
     btn.textContent = 'x';
   } else {
     console.log(menuShown); // se i konsollen
-    btn.textContent = '=';
+    btn.textContent = '≡';
     // sæt btn.textContent til "=", hvis menuShown er "false"
   }
   // "toggleMenu()" slutter her
