@@ -1,0 +1,192 @@
+html {
+    --fronpage-outer-background-brown-:#BAA590;
+    --fronpage-inner-background-brown:#BCA591;
+    --fronpage-inner-background-white:#FFFFFF;
+
+    --background-grey: #F4F4F4;
+    --menu-background: #F1EDE9;
+    --text-color-brown: #887D71;
+    --text-color-white: #FFFFFF;
+    --hover-color:#A9806B; 
+    
+    --space-0: 0.6rem;
+    --space-1: 1rem;
+    --space-1-5: 1.5rem;
+    --space-2: 2rem;
+
+    --h1-font-size: 3.5em;
+    --h2-font-size: 2.5em;
+    --h3-font-size: 2rem;
+    --text-font-size: 1em;
+  }
+
+.udforsk_footer{
+    position: fixed;
+}
+
+.text {
+    position: relative;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 2;
+  }
+
+  .content img{
+      width: 100%;
+      height: 100%;
+  }
+  
+  .content {
+    opacity:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .text .content:hover {
+    opacity: 1;
+  }
+
+  .color{
+      background-color: var( --fronpage-inner-background-brown);
+      cursor: default;
+      z-index: -1; 
+  }
+
+  .color h3{
+      color: var(--text-color-white);
+  }
+
+  .color_box_styling{
+    height: 24vh;
+  }
+
+ .section_1_om{
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: 8rem;
+    
+}
+
+.text_om{
+    display:grid;
+    gap: var(--space-1);
+}
+
+.om_col_1{
+    background-color: var(--fronpage-inner-background-white);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: var(--space-1);
+}
+
+.section_1_ux,
+.section_1_web,
+.section_1_animation,
+.section_1_indhold,
+.section_1_portfolio{
+    display: grid;
+    background-color: var(--fronpage-inner-background-white);
+    gap: var(--space-1);
+}
+
+.tema_overskrift{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: unset;
+    height: 10vh;
+}
+
+.col{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: var(--fronpage-inner-background-white);
+    padding: var(--space-1);
+    height: 100%;
+}
+
+.section_1_web img,
+.section_1_ux img{
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: var(--space-1);
+}
+
+.col1 video{
+    width: 100%;
+} 
+
+@media (min-width: 650px){
+
+
+.section_1_udforsk{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.color_box_styling{
+    height: 100%;
+}
+
+.col1 {
+    grid-column: 1/3;
+}
+
+.col_span_row{
+    grid-row: 4/6;
+}
+
+.tema_overskrift{
+    grid-column: 1/3;
+}
+
+.section_1_ux,
+.section_1_web,
+.section_1_animation,
+.section_1_indhold,
+.section_1_portfolio{
+grid-template-columns: 1fr 1fr;
+}
+
+}
+
+@media (min-width: 1000px){
+
+    .section_1_udforsk{
+        display: grid;
+
+    }
+
+    .section_1_om{
+        margin-bottom: 6rem;
+    }
+
+    .om_container_1{
+        display: grid;
+        grid-template-columns: 1fr 2fr ;
+        gap: var(--space-1);
+        background-color: var( --fronpage-inner-background-white);
+    }
+
+    .om_container_1 img{
+        height: 100%;
+        padding: var(--space-1);
+    }
+
+    .om_container_2{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: var(--space-1);
+        background-color: var( --fronpage-inner-background-white);
+
+    }
+
+}

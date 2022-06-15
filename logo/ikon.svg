@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150">
+  <defs>
+    <clipPath id="clip-ikon">
+      <rect width="150" height="150"/>
+    </clipPath>
+  </defs>
+  <g id="ikon" clip-path="url(#clip-ikon)">
+    <rect width="150" height="150" fill="#f1ede9"/>
+    <text id="KM" transform="translate(21 76)" fill="#887d71" font-size="69" font-family="Montserrat-Light, Montserrat" font-weight="300"><tspan x="0" y="0">KM</tspan></text>
+    <text id="KM-2" data-name="KM" transform="translate(129 76) rotate(180)" fill="#887d71" font-size="69" font-family="Montserrat-Light, Montserrat" font-weight="300"><tspan x="0" y="0">KM</tspan></text>
+  </g>
+</svg>

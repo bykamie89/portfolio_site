@@ -1,0 +1,207 @@
+html {
+    --fronpage-outer-background-brown-:#BAA590;
+    --fronpage-inner-background-brown:#BCA591;
+    --fronpage-inner-background-white-:#FFFFFF;
+
+    --background-grey: #F4F4F4;
+    --menu-background: #F1EDE9;
+    --text-color-brown: #887D71;
+    --text-color-white: #FFFFFF;
+    --hover-color:#A9806B; 
+    
+    --space-0: 0.6rem;
+    --space-1: 1rem;
+    --space-1-5: 1.5rem;
+    --space-2: 2rem;
+
+    --h1-font-size: 3.5em;
+    --h2-font-size: 2.5em;
+    --h3-font-size: 2rem;
+    --text-font-size: 1em;
+  }
+
+.forside header, .forside footer, .forside main {
+    grid-column: 2/3;
+  }
+
+.forside a:hover{
+    border-top: 2px solid var(--hover-color);
+}
+
+.forside {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 400px) 1fr;
+    background: linear-gradient(var(--fronpage-outer-background-brown-) 51.9vh, var(--background-grey) 0%);
+    background-repeat:no-repeat;
+}
+
+.forside_banner{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-2);
+    margin-bottom:0;
+    background-color: var(--menu-background);
+
+  }
+
+  .forside_banner .logo{
+    margin-top: var(--space-0);
+    width: 80px;
+}
+
+.forside_menu ul{
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    gap: var(--space-1);
+    margin-right: var(--space-1);
+
+}
+
+.forside_menu ul li{
+    font-size: 1em;
+  }
+
+  .section_1_forside{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .col_1_1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fronpage-inner-background-brown);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  .col_1_1 h2{
+      margin: var(--space-0);
+      color: var(--text-color-white);
+  }
+
+  .col_1_1 img{
+    height: 60%;
+    width: 65%;
+  }
+
+   .col_1_2 img{
+    height: 70%;
+
+  }
+
+  .col_1_2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fronpage-inner-background-white);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 38vh;
+  }
+
+  .forside footer{
+      background-color: inherit;
+  }
+
+  @media (min-width: 700px) {
+    .forside{ 
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 600px) 1fr;
+        background: linear-gradient(var(--fronpage-outer-background-brown-) 73vh, var(--background-grey) 0%);
+    }
+
+    .col_1_1{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .col_1_1 img{
+        height: 70%;
+    }
+
+    .col_1_2{
+        height: 59vh;
+    }
+
+    .forside footer{
+        background-color: inherit;
+    }
+
+    .col_1_2 img{
+        height: 70%;
+        width: 70%;
+    }
+
+  }
+
+  @media (min-width: 1000px) {
+    .forside{ 
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+        background: linear-gradient(90deg, var(--background-grey)  50vw, var(--fronpage-outer-background-brown-) 0%);
+    }
+
+    .forside_banner{
+        margin-top: var(--space-2);
+    }
+
+    .section_1_forside{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .col_1_1{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+        height: 76vh;
+    }
+
+    .col_1_1 img{
+        height: 56%;
+       width: 70%;
+    }
+
+    .col_1_1 h2{
+        margin-bottom: var(--space-2);
+    }
+
+    .col_1_2{
+        height: 76vh;
+    }
+
+    .forside footer{
+        margin-right: var(--space-1-5);
+    }
+
+  }
+
+  @media (min-width: 1400px){
+      .forside{
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 1400px) 1fr;
+      }
+
+      .col_1_2{
+        height: 76vh;
+    }
+
+    .forside footer{
+        background-color: inherit;
+    }
+
+    .col_1_2 img{
+        height: 80%;
+    }
+
+    .col_1_1 img{
+        height: 65%;
+    }
+
+  }

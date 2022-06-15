@@ -1,0 +1,248 @@
+html {
+    --fronpage-outer-background-brown-:#BAA590;
+    --fronpage-inner-background-brown:#BCA591;
+    --fronpage-inner-background-white-:#FFFFFF;
+
+    --background-grey: #F4F4F4;
+    --menu-background: #F1EDE9;
+    --text-color-brown: #887D71;
+    --text-color-white: #FFFFFF;
+    --hover-color:#A9806B; 
+    
+    --space-0: 0.6rem;
+    --space-1: 1rem;
+    --space-1-5: 1.5rem;
+    --space-2: 2rem;
+
+    --h1-font-size: 3.5em;
+    --h2-font-size: 2.5em;
+    --h3-font-size: 2rem;
+    --text-font-size: 1em;
+  }
+
+* {
+    all: unset;
+    display: revert;
+    cursor: revert;
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  body {
+    min-height: 100vh;
+    line-height: 1.6;
+    background-color: var(--background-grey);
+  }
+
+  footer {
+    position: relative;
+    height: 10vh;
+    bottom:0;
+    background-color: var(--background-grey);
+    width: 100%;
+    text-align: center;
+  }
+
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--text-color-brown);
+  } 
+  
+  h3, h4, p, a, li{
+   font-family: 'Montserrat', sans-serif;
+   color: var(--text-color-brown);
+  }
+
+  h1{
+    font-size: var(--h1-font-size);
+  }
+  
+  h2{
+    margin-bottom: var(--space-1);
+    font-size: var(--h2-font-size);
+  }
+
+  h3{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--space-1);
+  }
+
+  p, a, li {
+    font-size: var(--text-font-size);
+    max-width: 65ch;
+  }
+
+  strong{
+    font-weight: bold;
+  }
+
+  
+
+  a:hover{
+    color: var(--hover-color);
+    border-top: 2px solid var(--hover-color);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 400px) 1fr;
+      margin-bottom: var(--space-1);
+  }
+
+  main section{
+    grid-column: 2/3;
+  }
+
+.logo{
+    margin-top: var(--space-0);
+    width: 80px;
+}
+
+  .banner {
+      position: sticky;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: var(--space-2) var(--space-2) var(--space-2) var(--space-2);
+      background-color: var(--menu-background);
+      height: 6rem;
+  }
+
+  .hide{
+      display: none;
+  }
+
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    color: var(--text-color-brown);
+    padding-right: var(--space-1);
+  }
+
+  .menu {
+  display: contents;
+  }
+
+  .menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    list-style: none;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    background-color: var(--menu-background);
+    padding: var(--space-1);
+  }
+
+@media (min-width: 650px) {
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 450px) 1fr;
+  }
+
+  main section{
+    grid-column: 2/3;
+  }
+
+  .banner{
+    background-color: var(--background-grey);
+  }
+
+.menu ul{ 
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: var(--space-1);
+  align-items: center;    
+  background-color: var(--menu-background);
+  padding: var(--space-1);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar {
+  display:flex;
+}
+
+.sidebar2 {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.vl1, .vl2 {
+  border-left: 2px solid var(--text-color-brown);
+  height: 500px;
+  margin-right: var(--space-2);
+}
+
+.vl1{
+  margin-left: var(--space-2);
+}
+
+.vl2{
+  margin-top: 9rem;
+  margin-right:var(--space-2);
+} 
+
+}
+
+@media (min-width: 700px){
+  main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 600px) 1fr;
+  }
+
+  main section{
+    grid-column: 2/3;
+  }
+}
+
+ @media (min-width: 1000px){
+  .forside main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 800px) 1fr;
+  }
+
+  main section{
+    grid-column: 2/3;
+  } 
+
+} 
+
+@media (min-width: 1400px){
+  
+  main{
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+  }
+
+  .forside main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1400px) 1fr;
+  }
+
+  main section{
+    grid-column: 2/3;
+  }
+  .menu ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
